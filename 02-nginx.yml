@@ -1,4 +1,4 @@
-- name: install and start nginx
+- name: install and start nginx   #playbook itself list of plays
   hosts: frontend
   become: yes
   tasks:
