@@ -1,13 +1,13 @@
 - name: PLAY-01
   hosts: frontend  #available in .ini file
-  tsaks:
+  tasks:
   - name: PLAY-01 and TASK 01
     ansible.builtin.debug:
      message: "hello from play 01 and task 1"
 
   - name: PLAY-01
   hosts: frontend  #available in .ini file
-  tsaks:
+  tasks:
   - name: PLAY-01 and TASK 02
     ansible.builtin.debug:
      message: "hello from play 01-task 2"   
@@ -15,14 +15,14 @@
 #play-2
 - name: PLAY-02
   hosts: frontend  #available in .ini file
-  tsaks:
+  tasks:
   - name: PLAY-02 and TASK 01
     ansible.builtin.debug:
      message: "hello from play 02 and task 1"
 
   - name: PLAY-02
   hosts: frontend  #available in .ini file
-  tsaks:
+  tasks:
   - name: PLAY-02 and TASK 02
     ansible.builtin.debug:
      message: "hello from play 02 and task 2"   
