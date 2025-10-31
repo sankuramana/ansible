@@ -16,8 +16,8 @@
 
 # You cannot mix them together.
   tasks:
-  - name: print the course info
-    vars:
-    COURSE: Ansible
-    ansible.builtin.debug:
-      msg: "courcse name is:{{COURSE}}, duration is : {{DURATION}}, tariner is:{{TRAINER}}" #{{}}
+    - name: print the course info
+      vars:
+      COURSE: Ansible
+      ansible.builtin.debug:
+        msg: "courcse name is:{{COURSE}}, duration is : {{DURATION}}, tariner is:{{TRAINER}}" #{{}}
