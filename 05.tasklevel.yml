@@ -7,9 +7,17 @@
    TRAINER: siva_kumar
   #  ansible.builtin.debug:
   #   msg: "courcse name is:{{COURSE}}, duration is : {{DURATION}}, tariner is:{{TRAINER}}" #{{}}
+  # you can not print msg in play level it always should be  on task 
+#   🧠 Explanation:
+
+# The vars: section is only for defining variables.
+
+# The tasks: section is for running modules like ansible.builtin.debug.
+
+# You cannot mix them together.
   tasks:
   - name: print the course info
-    # vars:
-    # COURSE: Ansible
+    vars:
+    COURSE: Ansible
     ansible.builtin.debug:
       msg: "courcse name is:{{COURSE}}, duration is : {{DURATION}}, tariner is:{{TRAINER}}" #{{}}
