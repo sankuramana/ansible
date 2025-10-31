@@ -18,6 +18,6 @@
   tasks:
     - name: print the course info
       vars:
-       COURSE: Ansible
+       COURSE: Ansible #overriding the variable #task level priority is high then play levele
       ansible.builtin.debug:
         msg: "courcse name is:{{COURSE}}, duration is : {{DURATION}}, tariner is:{{TRAINER}}" #{{}}
