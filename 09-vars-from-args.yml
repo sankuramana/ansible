@@ -1,6 +1,6 @@
 - name: play level varaibles
   hosts: local
-  connection: local 
+  connection: local  #varabiles not defined 
   tasks:
   - name: print the course info
     ansible.builtin.debug:
