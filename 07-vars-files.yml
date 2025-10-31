@@ -2,7 +2,9 @@
   hosts: local
   connection: local
   vars_files:
-  - course.yml
+  - course.yml #loading files or varables from the using files
+# You’re learning how to import variables from another YAML file and use them in a playbook.
+# This is useful when you want to separate your data (variables) from logic (tasks) — a best practice in Ansible.
   tasks: 
   - name: print course info
     ansible.builtin.debug:
