@@ -6,4 +6,4 @@
   tasks: 
   - name: print course info
     ansible.builtin.debug:
-    msg: "courcse name is:{{COURSE}}, duration is : {{DURATION}}, tariner is:{{TRAINER}}"
+     msg: "courcse name is:{{COURSE}}, duration is : {{DURATION}}, tariner is:{{TRAINER}}"
