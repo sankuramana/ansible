@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    number: 9
+    number: 9 #100 then skipping
   tasks:
   - name: chceking number is lesthen 10 or not
     ansible.builtin.debug:

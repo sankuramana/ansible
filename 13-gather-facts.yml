@@ -1,0 +1,9 @@
+- name: gathering facts #when
+  hosts: local
+  connection: local
+  vars:
+    name: facts
+    ansible.builtin.debug:
+     msg: "{{ansible_facts}}"
+
+
