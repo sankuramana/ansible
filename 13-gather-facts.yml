@@ -2,7 +2,6 @@
   hosts: local
   connection: local
   tasks:
-  vars:
   - name: facts
     ansible.builtin.debug:
      msg: "{{ansible_facts}}"
