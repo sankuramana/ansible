@@ -1,10 +1,9 @@
 - name: gathering facts #when
   hosts: local
   connection: local
-  
   tasks:
   vars:
-    name: facts
+  - name: facts
     ansible.builtin.debug:
      msg: "{{ansible_facts}}"
 
