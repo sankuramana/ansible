@@ -1,0 +1,32 @@
+- name: install packages
+  hosts: local
+  connection: local
+  become : yes
+  tasks:
+  -  name: print names
+     ansible.builtin.package:
+      name: "{{ item.name}}"
+      state: "{{item.stste}}"
+     loop:
+     - {name: "nginx" , state: "latest"}
+     - {name: "mysql" , state: "absent"}
+
+     - {name: "zip", state: "latest"}
+  
+  #################################################
+  # - name: install packages
+  # hosts: local
+  # connection: local
+  # become : yes
+  # tasks:
+  # -  name: print names
+  #    ansible.builtin.package:
+  #     name: "{{ item }}"    # prints line by line but here  name: "{{ item.name}}"
+  #     state: latest
+  #    loop:
+  #    - {name: "nginx" , state: "latest"}
+  #    - {name: "mysql" , state: "absent"}
+
+  #    - {name: "zip", state: "latest"}
+  
+  
