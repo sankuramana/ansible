@@ -6,7 +6,12 @@
   tasks:
   - name: chceking number is lesthen 10 or not
     ansible.builtin.debug:
-      when: number < 10 
-
+      #when: number < 10 
       msg: "given number {{number}} is less then 10"
-    # when: number < 10 
+    when: number < 10 
+    
+    
+    
+      # ❌ Wrong — 'when' should not be inside 'ansible.builtin.debug'
+       # msg: "given number {{number}} is less then 10"
+      # when: number < 10     # (this commented one is correct location)
