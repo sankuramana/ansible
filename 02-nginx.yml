@@ -3,7 +3,7 @@
   connection: local
   become: yes
   tasks:
-  - name: install nginx #jsjs
+  - name: install nginx #dnf takesfrom the background keep in ansible_faccts
     ansible.builtin.package:
      name: nginx
      state: present
