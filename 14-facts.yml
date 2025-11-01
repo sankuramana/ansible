@@ -3,8 +3,8 @@
   connection: local
   become: yes
   tasks:
-  - name: install nginx if RedHat
-    ansible.builtin.dnf:
-    name: nginx
-    state: latest
-    when: ansible_os_family == "RedHat" # use ansible  
+  -  name: install nginx if RedHat
+     ansible.builtin.dnf:
+     name: nginx
+     state: latest
+     when: ansible_os_family == "RedHat" # use ansible  
