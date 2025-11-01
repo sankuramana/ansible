@@ -1,5 +1,6 @@
 - name: install and start nginx   #playbook itself list of plays
   hosts: local
+  connection: local
   become: yes
   tasks:
   - name: install nginx #jsjs
