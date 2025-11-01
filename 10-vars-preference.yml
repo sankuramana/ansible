@@ -14,7 +14,7 @@
     # vars:
     #   NAME: from task level
     ansible.builtin.debug:
-      msg: "Name: {{ NAME }}"
+      msg: "Name: {{ NAME }}" #if u get error provide name somewehere. like on command -e "NAME=ramana"
 
 # 1. args or command line
 # 2. from task
