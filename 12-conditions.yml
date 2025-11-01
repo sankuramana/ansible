@@ -5,6 +5,6 @@
    number: 12
   tasks:
   - name: chceking number is lesthen 10 or not
-    ansible.builtin debug:
+    ansible.builtin.debug:
       msg: "given number {{number}} is less then 10"
     when: number < 10 
