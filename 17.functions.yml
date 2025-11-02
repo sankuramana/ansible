@@ -3,6 +3,7 @@
   connection: local
   vars:
     name: "siva kumar M"
+    gmail: 'SankuRamana456@gmail.com'
   #string
     techmologies: Devops, Linux, Shell, Ansible #string
     #tag
@@ -67,7 +68,10 @@
   - name: Convert Upper case
     ansible.builtin.debug:
       msg: "{{ name | upper }}"
-
+#converting lower case      
+  - name: Convert Upper case
+    ansible.builtin.debug:
+      msg: "{{ gmail | lower }}"
 
 
 
