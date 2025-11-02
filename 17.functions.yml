@@ -2,6 +2,7 @@
   hosts: local
   connection: local
   vars:
+    name: "siva kumar M"
   #string
     techmologies: Devops, Linux, Shell, Ansible #string
     #tag
@@ -53,15 +54,21 @@
   - name: read yml and takke it to variable
     ansible.builtin.set_fact:
       student_yml: "{{ lookup('file', 'student.yaml') | from_yaml }}"            #reading student file
-
+#convert yml to json
   - name: convert yml to json
     ansible.builtin.debug:
       msg: " json is :{{ student_yml | to_json }}"
-
+#save json to file to read nice way
   - name: save json to file to read nice way
     ansible.builtin.copy:
       dest: ./student-data.json
       content: "{{ student_yml | to_nice_json }}"
+#convert uppercase
+  - name: Convert Upper case
+    ansible.builtin.debug:
+      msg: "{{ name | upper }}"
+
+
 
 
   
