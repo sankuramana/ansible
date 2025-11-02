@@ -61,7 +61,7 @@
   - name: save json to file to read nice way
     ansible.builtin.copy:
       dest: ./student-data.json
-      contesnt: "{{ student_yml | to_nice_json }}"
+      content: "{{ student_yml | to_nice_json }}"
 
 
   
