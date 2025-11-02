@@ -2,7 +2,10 @@
   hosts: local
   connection: local
   vars:
-    techmologies: Devops, Linux, Shell, Ansible
+    techmologies: Devops, Linux, Shell, Ansible #string
+    tags:           #map/dictionary
+     Application: payment
+     Environment: dev
   tasks:
   -  name: default vaariable
      ansible.builtin.debug:
@@ -11,7 +14,11 @@
 #string to list:
   - name: convert string to list
     ansible.builtin.debug:
-      msg: "techmologies are : {{ techmologies | split(',') }}"
+      msg: "techmologies are : {{ techmologies | split(',') }}" #split(' ') will convert data using ,
+
+  - name: converting dictionary/map to list
+    ansible.builtin.debug:
+      msg: "tags are: {{ tags | dict2items}}"
   
 
 
