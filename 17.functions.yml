@@ -96,8 +96,12 @@
 #   jinja version = 3.1.2
 #   libyaml = True
   - name: check ip is valid or not
-    ansible.builtin.command: cat /etc/passwd | grep root  #reading
+    #ansible.builtin.command: cat /etc/passwd | grep root  #reading
+    #The command module in Ansible does NOT support pipes (|) or shell features.
+    ansible.builtin.shell: cat /etc/passwd | grep root 
+    
     register: command_output
+    
 
 
 
