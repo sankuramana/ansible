@@ -2,10 +2,19 @@
   hosts: local
   connection: local
   vars:
+  #string
     techmologies: Devops, Linux, Shell, Ansible #string
+    #tag
     tags:           #map/dictionary
      Application: payment
      Environment: dev
+     #lsit
+    Listtags:
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev 
+
   tasks:
   -  name: default vaariable
      ansible.builtin.debug:
@@ -16,9 +25,27 @@
     ansible.builtin.debug:
       msg: "techmologies are : {{ techmologies | split(',') }}" #split(' ') will convert data using ,
 
+# TASK [convert string to list] ***************************************************************************************************************************
+# ok: [172.31.29.92] => {
+#     "msg": "techmologies are : ['Devops', ' Linux', ' Shell', ' Ansible']"
+# }
+#  started with braket
+
   - name: converting dictionary/map to list
     ansible.builtin.debug:
       msg: "tags are: {{ tags | dict2items}}"
+# #TASK [converting dictionary/map to list] ****************************************************************************************************************
+# ok: [172.31.29.92] => {
+#     "msg": "tags are: [{'key': 'Application', 'value': 'payment'}, {'key': 'Environment', 'value': 'dev'}]"
+# }
+# bracket with braceses
+#convertin
+  - name: converting  list to dictionary/map
+    ansible.builtin.debug:
+      msg: "tags map: {{ Listtags | items2dict}}"
+
+
+
   
 
 
