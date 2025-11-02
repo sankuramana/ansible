@@ -98,12 +98,17 @@
   - name: grep for root
     #ansible.builtin.command: cat /etc/passwd | grep root  #reading
     #The command module in Ansible does NOT support pipes (|) or shell features.
-    ansible.builtin.shell: cat /etc/passwd | grep root 
+    ansible.builtin.shell: cat /etc/passwd | grep root  # no error because used shell
     register: command_output
     
   - name: orint the command_output
     ansible.builtin.debug:
       msg: "{{ command_output }}"
+
+  - name: redirect the output
+    ansible.builtin.command: ls -ltr > /tmp/output.txt 
+    register: redirect_output #excecute ls -ltr > /tmp/output.txt  this comand  andstores in redirect_output
+    
 
 
 
