@@ -1,0 +1,7 @@
+- name: functions
+  hosts: local
+  connection: local
+  tasks:
+  - name: default vaariable
+    ansible.builtin default:
+     msg: "Hello {{name}}"
