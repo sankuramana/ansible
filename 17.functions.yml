@@ -110,6 +110,10 @@
         #ansible.builtin.command: ls -ltr > /tmp/output.txt 
 
     register: redirect_output #excecute ls -ltr > /tmp/output.txt  this comand  andstores in redirect_output
+  
+  - name: print the redirect_output
+    ansible.builtin.debug:
+      msg: "{{ redirect_output }}"  
     
 
 
