@@ -3,5 +3,5 @@
   connection: local
   tasks:
   -  name: default vaariable
-     ansible.builtin default:
-      msg: "Hello {{name}}"
+     ansible.builtin.debug:
+       msg: "Hello {{name | default('ramesh')}}"
