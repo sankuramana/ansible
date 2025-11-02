@@ -4,7 +4,8 @@
   vars:
     name: "siva kumar M"
     gmail: 'SankuRamana456@gmail.com'
-    ipaddress: 345.4329.3343.0908
+    #ipaddress: 345.4329.3343.0908
+    ipaddress: 172.31.29.92
   #string
     techmologies: Devops, Linux, Shell, Ansible #string
     #tag
@@ -79,6 +80,22 @@
   - name: check ip is valid or not
     ansible.builtin.debug:
       msg: "{{ ipaddress | ansible.utils.ipv4 }}"
+      # FAILED! => {"msg": "Failed to import the required Python library 
+      #python version = 3.9.18
+      #need to install build tool which is pip3.9 install netaddr
+      
+# 3.80.65.47 | 172.31.28.3 | t3.micro | https://github.com/sankuramana/ansible.git
+# [ ec2-user@ip-172-31-28-3 ~/ansible ]$ ansible --version
+# ansible [core 2.14.18]
+#   config file = /etc/ansible/ansible.cfg
+#   configured module search path = ['/home/ec2-user/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+#   ansible python module location = /usr/lib/python3.9/site-packages/ansible
+#   ansible collection location = /home/ec2-user/.ansible/collections:/usr/share/ansible/collections
+#   executable location = /usr/bin/ansible
+#   python version = 3.9.18 (main, Jan  4 2024, 00:00:00) [GCC 11.4.1 20230605 (Red Hat 11.4.1-2)] (/usr/bin/python3)
+#   jinja version = 3.1.2
+#   libyaml = True
+
 
 
 
