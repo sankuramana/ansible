@@ -18,6 +18,7 @@
   # hosts: local
   # connection: local
   # become : yes
+  #cbc
   # tasks:
   # -  name: print names
   #    ansible.builtin.package:
