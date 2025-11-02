@@ -55,7 +55,7 @@
       student_yml: "{{ lookup('file', 'student.yml') | from_yaml }}"            #reading student file
 
   - name: convert yml to json
-    ansible.builtin.set_fcats:
+    ansible.builtin.set_fcat:
       msg: " json is :{{ student_yml | to_json }}"
 
 
