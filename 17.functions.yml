@@ -10,7 +10,7 @@
 
 #string to list:
 - name: convert string to list
-  ansible.builtin debug:
+  ansible.builtin.debug:
     msg: "techmologies are : {{ techmologies | split(',') }}"
   
 
