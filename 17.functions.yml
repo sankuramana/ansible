@@ -52,7 +52,7 @@
 #set facts is to read and create varable
   - name: read yml and takke it to variable
     ansible.builtin.debug:
-      student_yml: "{{ lookup('file', 'student.yml') | from_yaml }}"            #reading student file
+      student_yml: "{{ lookup('file', 'student.yaml') | from_yaml }}"            #reading student file
 
   - name: convert yml to json
     ansible.builtin.set_fcat:
