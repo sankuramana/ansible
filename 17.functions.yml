@@ -9,9 +9,9 @@
        msg: "Hello {{name | default('ramesh')}}"
 
 #string to list:
-- name: convert string to list
-  ansible.builtin.debug:
-    msg: "techmologies are : {{ techmologies | split(',') }}"
+  - name: convert string to list
+    ansible.builtin.debug:
+      msg: "techmologies are : {{ techmologies | split(',') }}"
   
 
 
