@@ -3,4 +3,6 @@
   tasks:
   - name: ping
     ansible.builtin.ping:
+    # ansible-playbook -i inventory.ini  17.functions.yml
+
         
