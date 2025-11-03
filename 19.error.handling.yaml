@@ -8,6 +8,6 @@
      register: user_output
      ignore_errors: true
   -  name: print user output
-     ansible.build.debug:
-       msg: "{{ user_output }}"  
+     ansible.builtin.debug:
+      msg: "{{ user_output }}"  
 
